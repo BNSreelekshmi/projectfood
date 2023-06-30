@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{{result2.image.url}}" width="350" height="350">
+        </div>
+        <div class="col-md-6">
+            <h1 style="font-family:Stencil"> {{result2.name}} </h1> <br>
+            <h6 style="font-family:Elephant">INGREDIENTS</h6>
+            <h5 style="font-family:Timesnewroman">{{result2.ingre}}</h5>
+            <h6 style="font-family:Elephant">HOW TO COOK??</h6>
+            <h5 style="font-family:Timesnewroman">{{result2.desc}}</h5>
+            <!--urls-path-name-update-->
+<a class="btn btn-primary" href="{% url 'foodapp:update' result2.id %}">  Update </a>
+<a class="btn btn-danger" href="{% url 'foodapp:delete' result2.id %}">  Delete </a>
+
+        </div>
+
+ </div>
+</div>
+{% endblock %}
+
